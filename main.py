@@ -33,7 +33,7 @@ with st.expander("💼 Employment & Income"):
     with col2:
         income_lakhs = st.slider("💰 Income (in Lakhs)", 0, 200, 10, help="Your annual income in INR lakhs.")
     with col3:
-        genetical_risk = st.slider("🧬 Genetic Risk", 0, 5, 1, help="Any family history of diseases? Rate the severity from 0 to 5.")
+        region = st.selectbox("📍 Region", ['Northwest', 'Southeast', 'Northeast', 'Southwest'], help="Your geographic region of residence.")
 
 with st.expander("🏥 Medical & Insurance Info"):
     col1, col2, col3 = st.columns(3)
@@ -46,7 +46,7 @@ with st.expander("🏥 Medical & Insurance Info"):
     with col2:
         insurance_plan = st.radio("🛡️ Insurance Plan", ['Bronze', 'Silver', 'Gold'], help="Select your insurance plan level.")
     with col3:
-        region = st.selectbox("📍 Region", ['Northwest', 'Southeast', 'Northeast', 'Southwest'], help="Your geographic region of residence.")
+        genetical_risk = st.slider("🧬 Genetic Risk", 0, 5, 1, help="Any family history of diseases? Rate the severity from 0 to 5.")
 
 # Combine inputs into a dict
 input_dict = {
